@@ -1,26 +1,21 @@
+
 <body>
-	<div class="main">
-		<input type="checkbox" id="chk" aria-hidden="true">
+	<%- include ("partials/messages"); %>
 
-		<div class="signup">
-			<form>
-				<label for="chk" aria-hidden="true">Sign up</label>
-				<input type="text" name="txt" placeholder="User name" required="">
-				<input type="email" name="email" placeholder="Email" required="">
-				<input type="password" name="pswd" placeholder="Password" required="">
-				<button>Sign up</button>
-			</form>
-		</div>
+  <div class="main">
+    <div class="login">
+      <form action="/users/login" method="POST">
+        <label>Login</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="Email" value="<%= typeof email != 'undefined' ? email : '' %>" required="">
+        <input type="password" id="password" name="password" class="form-control" placeholder="Create Password" value="<%= typeof password != 'undefined' ? password : '' %>" required="">
+        <button>Login</button>
+        <a href="/forget" class="forgot-password">Forgot Password?</a>
+      </form>
 
-		<div class="login">
-			<form>
-				<label for="chk" aria-hidden="true">Login</label>
-				<input type="email" name="email" placeholder="Email" required="">
-				<input type="password" name="pswd" placeholder="Password" required="">
-				<button>Login</button>
-				<a href="/forget" class="forgot-password">Forgot Password?</a>
-			</form>
-		</div>
-	</div>
+      <p class="create-account">
+        Don't have an account? <a href="/register">Create New Account</a>
+      </p>
+    </div>
+  </div>
 </body>
 </html>
