@@ -8,7 +8,7 @@ const passport = require("passport");
 const port = 3000;
 
 //static
-app.use(express.static("public"));
+app.use(express.static('public'));
 
 //passport config
 require("./config/passport")(passport);
@@ -61,39 +61,39 @@ app.listen(port, () => {
 })
 
 
-app.get("/", (req,res) => {
-    res.render("index.ejs",{title : "homepage",layout:'mainlayout.ejs'})
-})
+app.get("/in", (req,res) => {
+    res.render("index.ejs",{title : "homepage",layout:'mainlayout.ejs'});
+});
 
 
 app.get("/404", (req,res) => {
-    res.render("404.ejs",{title : "404",layout:'mainlayout.ejs'})
-})
+    res.render("404.ejs",{title : "404",layout:'mainlayout.ejs'});
+});
 
 
 app.get("/about", (req,res) => {
-    res.render("about.ejs",{title : "about us",layout:'mainlayout.ejs'})
-})
+    res.render("about.ejs",{title : "about us",layout:'mainlayout.ejs'});
+});
 
 
 app.get("/contact", (req,res) => {
-    res.render("contact.ejs",{title : "contact us",layout:'mainlayout.ejs'})
-})
+    res.render("contact.ejs",{title : "contact us",layout:'mainlayout.ejs'});
+});
 
 
 app.get("/courses", (req,res) => {
-    res.render("courses.ejs",{title : "courses",layout:'mainlayout.ejs'})
-})
+    res.render("courses.ejs",{title : "courses",layout:'mainlayout.ejs'});
+});
 
 
 app.get("/team", (req,res) => {
-    res.render("team.ejs",{title : "our teams",layout:'mainlayout.ejs'})
-})
+    res.render("team.ejs",{title : "our teams",layout:'mainlayout.ejs'});
+});
 
 
 app.get("/testimonial", (req,res) => {
-    res.render("testimonial.ejs",{title : "testimonials",layout:'mainlayout.ejs'})
-})
+    res.render("testimonial.ejs",{title : "testimonials",layout:'mainlayout.ejs'});
+});
 
 
 app.get("/login", (req, res) => {

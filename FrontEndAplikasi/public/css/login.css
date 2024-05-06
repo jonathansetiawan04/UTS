@@ -78,7 +78,7 @@ button:hover{
 
 .login label {
 	display: block; /* Ensure labels are displayed as block elements */
-	color: #000000;
+	color: #a81f1f;
 	text-align: center;
 	transform: translateY(-50px) scale(0.6); /* Adjust positioning and scale */
 }
@@ -145,4 +145,54 @@ button:hover{
   .create-account a:hover {
 	color: #000;  /* Change text color on hover */
   }
+  
+
+  .alert {
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+  }
+  
+  .alert-warning,
+  .alert-success,
+  .alert-danger {
+	color: #000000;
+	background-color: #f8d7da; /* Warning background color */
+  }
+  
+  .alert-warning {
+	border-color: #f5c6cb; /* Warning border color */
+  }
+  
+  .alert-success {
+	color: #000000;
+	background-color: #dff0d8; /* Success background color */
+	border-color: #d6e9c6; /* Success border color */
+  }
+  
+  .alert-danger {
+	color: #000000;
+	background-color: #f2dede; /* Danger background color */
+	border-color: #ebccd1; /* Danger border color */
+  }
+  
+  .alert-dismissible .close {
+	position: absolute;
+	top: 0;
+	right: auto;
+	padding: 0.75rem 1.25rem;
+	color: inherit;
+	background-color: transparent;
+	border: 0;
+	border-radius: .25rem;
+	cursor: pointer;
+	opacity: .5; /* Set initial opacity */
+  }
+  
+  .alert-dismissible .close:hover {
+	color: #000;
+	opacity: 1; /* Set hover opacity */
+  }
+  
   

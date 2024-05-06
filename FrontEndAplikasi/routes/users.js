@@ -87,10 +87,15 @@ router.post("/register", (req, res) => {
 //login handle
 router.post("/login", (req, res, next) => {
   passport.authenticate("local", {
-    successRedirect: "/dashboard",
+    successRedirect: "/in",
     failureRedirect: "/users/login",
     failureFlash: true,
   })(req, res, next);
+});
+
+// Assuming req.user is populated after successful login
+router.get('/in', (req, res) => {
+  res.render('index', { user: req.user }); // Pass user object to the template
 });
 
 //logout handle

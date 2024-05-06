@@ -1,21 +1,16 @@
-
-<body>
-	<%- include ("partials/messages"); %>
-
-  <div class="main">
-    <div class="login">
-      <form action="/users/login" method="POST">
-        <label>Login</label>
-        <input type="email" id="email" name="email" class="form-control" placeholder="Email" value="<%= typeof email != 'undefined' ? email : '' %>" required="">
-        <input type="password" id="password" name="password" class="form-control" placeholder="Create Password" value="<%= typeof password != 'undefined' ? password : '' %>" required="">
-        <button>Login</button>
-        <a href="/forget" class="forgot-password">Forgot Password?</a>
-      </form>
-
-      <p class="create-account">
-        Don't have an account? <a href="/register">Create New Account</a>
-      </p>
-    </div>
+<div class="main">
+	<div class="login">
+	  <form action="/users/login" method="POST">
+		<label>Login</label>
+		<input type="email" id="email" name="email" class="form-control" placeholder="Email" value="<%= typeof email != 'undefined' ? email : '' %>" required="">
+		<input type="password" id="password" name="password" class="form-control" placeholder="Create Password" value="<%= typeof password != 'undefined' ? password : '' %>" required="">
+		<button>Login</button>
+		<a href="/forget" class="forgot-password">Forgot Password?</a>
+	  </form>
+  
+	  <%- include ("partials/messages"); %>  <p class="create-account">
+		Don't have an account? <a href="/register">Create New Account</a>
+	  </p>
+	</div>
   </div>
-</body>
-</html>
+  
